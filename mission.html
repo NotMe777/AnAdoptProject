@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+    <style>
+        body {
+    font-family: 'Montserrat Alternates';font-size: 22px;
+}
+        .content{
+            width: 1000px;
+            position: absolute;
+            top:55%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+
+        .header {
+  overflow: hidden;
+  width: 100%;
+  background-color: #6365f7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color: rgb(252, 224, 99);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  color: rgb(238, 240, 145);
+}
+
+/* Float the link section to the right */
+.header-centre {
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: 300px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-centre {
+    float: none;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 1000px;
+  background-color: #6365f7;
+  color: white;
+  text-align: left;
+  font-size: 18px;
+}
+.credits{
+    margin-left: 20px;
+}
+
+.info
+{
+  margin: 10px;
+}
+p{
+margin-bottom: 20px;
+font: 'Montserrat Alternates';
+}
+#spacer{
+  margin: 30px;
+}
+    </style>
+    <body>
+        <div class="content">
+
+        <div class="header">
+            <a href="homepage.html" class="logo">Logo</a>
+            <div class="header-centre">
+              <a href="homepage.html">Начало</a>
+              <a class="active" href="mission.html">Мисия осиновител</a>
+              <a href="gallery.html">Галерия</a>
+              <a href="contacts.html">Контакти</a>
+            </div>
+          </div>
+
+          <div class="info">
+<img src="images/Banner.jpg" alt="Animals" style="width:1000px">
+<br>
+           
+            <h2>За Мисията Осиновяване</h2>
+            <p>Навсякъде по света я има практиката да се осиновяват домашни любимци, вместо да се купуват и отглеждат скъпи породисти кучета и котки. PetsAdopters силно подкрепяме тази тенденция в модерния свят и се стремим да я превърнем в традиция и в България! 
+           </p>
+           <p>Благодарение на неуморните ни усилия и многобройните програми за кастрация и кампании за осиновявания, популацията на бездомни животни намаля в пъти през последните 10 години. Ще продължаваме да работим в тази посока! Бъдете част от това добро дело!</p>
+
+        </div>
+        <br>
+        <p id="spacer"></p>
+        
+        <div class="footer">
+        <p class="credits">XII Б Клас | Сияна, Миглена и Мартин</p>
+        </div>
+
+
+        </div>
+
+
+    </body>
+</html>
