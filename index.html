@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+    <style>
+        body {
+    font-family: 'Montserrat Alternates';font-size: 22px;
+}
+.content{
+            width: 1000px;
+            position: absolute;
+            top:65%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+
+        .header {
+  overflow: hidden;
+  width: 100%;
+  background-color: #6365f7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+img{
+box-shadow: 4px;
+}
+/* Style the header links */
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color: rgb(252, 224, 99);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  color: rgb(238, 240, 145);
+}
+
+/* Float the link section to the right */
+.header-centre {
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: 300px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-centre {
+    float: none;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 1000px;
+  background-color: #6365f7;
+  color: white;
+  text-align: left;
+  font-size: 18px;
+}
+.credits{
+    margin-left: 20px;
+}
+p{
+margin-bottom: 20px;
+font: 'Montserrat Alternates';
+}
+#spacer{
+  margin: 100px;
+}
+
+.child1{
+  display:inline-block;
+  align-items: center;
+  margin:10px;
+
+}
+.part1, .part2, .part3{
+  border:#6366f794 solid 2px;
+ margin: 10px;
+}
+.part1{
+  text-align: right;
+}
+.part2{
+  text-align: left;
+}
+a{
+  color: #a4a5e2;
+}
+.warning{
+  margin-left:220px;
+  margin-right:100px;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+    </style>
+    <body>
+        <div class="content">
+
+        <div class="header">
+            <a href="index.html" class="logo">Logo</a>
+            <div class="header-centre">
+              <a class="active" href="index.html">Начало</a>
+              <a href="mission.html">Мисия осиновител</a>
+              <a href="gallery.html">Галерия</a>
+              <a href="contacts.html">Контакти</a>
+            </div>
+          </div>
+
+          <div>
+
+            <div class="part1">
+<div class="child1">
+<img src="images/titlim.jpg" alt="Man with Dog" style: width="420px"> 
+</div>
+<div class="child1">
+  <p>Целта на проекта "PetsAdopters" е да набере<br> осиновители на животни в нужда. Животните могат<br> да бъдат осиновявани от частни лица и от<br> организации (например учебни институции).<br> В този сайт ще разберете какво е<br> осиновител и какви са условията<br> за кандидатстване.</p>
+  <br><br>
+  <a href="mission.html">Научете още...</a>
+</div>
+            </div>
+            <div class="part2">
+              <div class="child1">
+<h4>Какви са общите условия за кандидатстване?</h4>
+<ul>
+  <li>Стабилен доход</li>
+  <li>Място за живеене</li>
+  <li>Любов за животните</li>
+</ul>
+<p>Това е всичко, от което се нуждаете<br> за да помогнете!</p>
+<a href="https://www.four-paws.bg/nashata-rabota-i-kampanii/napravleniya/osinovi-ot-chetiri-lapi">Допълнителна информация</a>
+              </div>
+<div class="child1">
+  <img src="images/womcat.webp" alt="Woman with cat" style: width="420px">
+</div>
+            </div>
+
+          </div>
+          <div class="part3">
+            <div class="warning">
+              <p><i>ТОВА Е УЧЕНИЧЕСКИ ПРОЕКТ. САЙТЪТ НЕ РЕАЛЕН</i></p>
+              </div>
+          </div>
+
+        
+        <p id="spacer"></p>
+        <div class="footer">
+        <p class="credits">XII Б Клас | Сияна & Миглена</p>
+        </div>
+
+
+        </div>
+
+
+    </body>
+</html>

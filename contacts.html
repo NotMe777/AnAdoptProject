@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./index.js"></script>
+  <script type="text/javascript">
+    function showMessageSucc() {
+        alert("Успешно изпратено съобщение.");
+    }
+    function showMessageFail(text) {
+        alert(text);
+    }
+</script>
+</head>
+    <style>
+        body {
+    font-family: 'Montserrat Alternates';font-size: 22px;
+}
+        .content{
+            width: 1000px;
+            position: absolute;
+            top:60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+        }
+
+        .header {
+  overflow: hidden;
+  width: 100%;
+  background-color: #6365f7;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color: rgb(252, 224, 99);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  color: rgb(238, 240, 145);
+}
+
+/* Float the link section to the right */
+.header-centre {
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: 300px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-centre {
+    float: none;
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 10px;
+  width: 1000px;
+  background-color: #6365f7;
+  color: white;
+  text-align: left;
+  font-size: 18px;
+}
+.credits{
+    margin-left: 20px;
+}
+p{
+margin-bottom: 20px;
+font: 'Montserrat Alternates';
+}
+#spacer{
+  margin: 120px;
+}
+.child1{
+  display: inline-block;
+}
+.part1, .part2, .part3{
+ margin: 10px;
+}
+.form{
+  display:inline-block;
+  font-size: 12;
+}
+#map{
+height:300px;
+width:300px;
+}
+#contInf{
+  background-color: #bbccff91;
+  float:right;
+  text-align: right;
+  width: 350px;
+}
+.contactInf{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+fieldset{
+  border:#1a1b6d9c solid 2px;
+  height:550px;
+}
+#ContForm{
+width:650px;
+}
+
+#submit{
+  margin-left: 20px;
+  width: 100px;
+  height: 60px;
+  font-size: 20;
+  margin-top: -40px;
+}
+
+label[for="namec"]{
+margin-left: 45px;
+}
+label[for="query"]{
+  margin-left:10px;
+}
+label[for="telephone"]{
+margin-left:10px;
+}
+.warning{
+  margin-left:220px;
+  margin-right:100px;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+    </style>
+    <body>
+        <div class="content">
+
+        <div class="header">
+            <a href="index.html" class="logo">Logo</a>
+            <div class="header-centre">
+              <a class="active" href="index.html">Начало</a>
+              <a href="mission.html">Мисия осиновител</a>
+              <a href="gallery.html">Галерия</a>
+              <a class="active" href="contacts.html">Контакти</a>
+            </div>
+          </div>
+          <div class="contactInf">
+<div class="form" id="ContForm"> 
+  <fieldset>
+    <legend>Свържете се с нас:</legend>
+    <p></p>
+<br action="/action_page.php">
+<p></p>
+<div class="part1">
+  <div class="child1">
+<label for="namec">Име:</label>
+  <textarea id="namec" name="namec" rows="1" cols="20">
+    </textarea>
+  </div>
+  <div class="child1">
+    <label for="telephone">Телефон:</label>
+    <textarea id="telephone" name="telephone" rows="1" cols="20">
+      </textarea> 
+    </div>
+    </div>
+    <br><br>
+    <div class="part2">
+      <div class="child1">
+    <label for="email">Ел. Поща:</label>
+    <textarea id="email" name="email" rows="1" cols="20">
+      </textarea>
+    </div>
+    <div class="child1">
+      <label for="query">Вид запитване:</label>
+      <select name="query" id="query">
+        <option value="adopt">За Осиновяване</option>
+        <option value="mission">Относно Мисията</option>
+        <option value="other">Друго</option>
+      </select>
+    </div>
+    </div>
+    <div class="part3">
+      <p>Запитване:</p>
+      <label for="question"></label>
+      <textarea id="question" name="question" rows="7" cols="70">
+        </textarea>
+      </div>
+      <br><br> 
+      <input type="button" id="submit" value="изпрати" onclick="formValidation()"/>
+      <br><br>
+</form>
+<script>
+
+function formValidation() {
+  let x1 = document.getElementById("namec").value;
+  let x2 = document.getElementById("telephone").value;
+  let x3 = document.getElementById("email").value;
+  let x4 = document.getElementById("question").value;
+  let text;
+  if (isNaN(x1)==false || x1==null) {
+    text = "Грешка при въвеждане на името";
+    showMessageFail(text);
+  } else if(x2==null || isNaN(x2)){
+     text = "Грешка при въдеждане на телефонния номер";
+     showMessageFail(text);
+  } else if(x3==null || x3.includes("@")==false){
+    text= "Невалиден имейл";
+    showMessageFail(text);
+  } else if(x4==null){
+    text="Моля задайте запитване.";
+    showMessageFail(text);
+  } else{
+    showMessageSucc();
+  }
+}
+
+</script>
+</fieldset>
+</div>
+<div class="form" id="contInf">
+<fieldset>
+  <legend>Можете да ни намерите на:</legend>
+  <a href="mailto: pet_adoption77777@gmail.com">pet_adoption@gmail.com</a>
+  <p>+3598888888</p>
+  <p>ул."Августа Траяна" 44</p>
+  <div id="map">
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5IEEBCWF1EiiQqsqmgMLLgiQBELjouxM&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <script>
+    function initMap() {
+      const pmggm = { lat: 42.43254187150048, lng: 25.62867352423585};
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: pmggm,
+      });
+      const marker = new google.maps.Marker({
+        position: pmggm,
+        map: map,
+      });
+    }
+    </script>
+</div>
+</fieldset>
+</div>
+
+</div>
+
+<div class="warning">
+<p><i>ТОВА Е УЧЕНИЧЕСКИ ПРОЕКТ. САЙТЪТ НЕ РЕАЛЕН</i></p>
+</div>
+
+<p id="spacer"></p>
+        <div class="footer">
+        <p class="credits">XII Б Клас | Сияна & Миглена</p>
+        </div>
+
+        </div>
+
+    </body>
+</html>
